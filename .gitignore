@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# La config real de cada negocio no se versiona: solo el ejemplo.
+config/tenants/*.json
+!config/tenants/demo.json
+
+# Notas del negocio real (pendientes, decisiones del dueño): quedan en disco.
+*.local.md

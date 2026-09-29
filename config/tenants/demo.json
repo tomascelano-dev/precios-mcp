@@ -1,0 +1,68 @@
+{
+  "nombre": "Tienda Demo",
+  "moneda": "U$S",
+
+  "markup": {
+    "iphone": 90,
+    "samsung": 50,
+    "motorola": 50,
+    "xiaomi": 50,
+    "accesorios_apple": 35,
+    "apple_watch": 60,
+    "airpods": 60,
+    "ipad": 100,
+    "consolas": 100,
+    "macbook": 130
+  },
+  "bateria": { "umbral": 85, "extra": 40 },
+  "alerta_margen_pct": 120,
+  "alerta_variacion_pct": 10,
+
+  "typos": {
+    "Lavander": "Lavender",
+    "Sihouette": "Silhouette",
+    "Yelow": "Yellow"
+  },
+  "colores_abreviados": {
+    "Mid": "Midnight",
+    "Ultra": "Ultramarine"
+  },
+
+  "proveedores": {
+    "oficial": {
+      "vigencia_dias": 1,
+      "garantia": { "nuevo": "oficial 12 meses", "tester": "1 mes", "default": "3 meses" }
+    },
+    "mayorista": {
+      "vigencia_dias": 1,
+      "garantia": { "default": null },
+      "nota": "No declara garantía: las listas que lo mezclan no prometen ninguna"
+    },
+    "semi_nuevos": {
+      "vigencia_dias": 1,
+      "garantia": { "default": "30 días" }
+    },
+    "alternativo": { "activo": false, "motivo": "lista vencida" }
+  },
+
+  "plantillas": {
+    "nuevos": "- *{modelo}* {capacidad} — {colores} — *{moneda} {precio}*{sufijos}",
+    "android": "- {modelo} – {ram_rom} — {colores} — *{moneda} {precio}*{sufijos}",
+    "usados": "- {capacidad} | {colores} | {bateria} | *{moneda} {precio}*{sufijos}"
+  },
+
+  "listas": [
+    { "titulo": "IPHONE 18", "emoji": "📱", "categorias": ["iphone"], "condiciones": ["nuevo"], "modelo_prefijo": "iPhone 18", "plantilla": "nuevos" },
+    { "titulo": "IPHONE NUEVO", "emoji": "📱", "categorias": ["iphone"], "condiciones": ["nuevo"], "plantilla": "nuevos" },
+    { "titulo": "IPHONE TESTER", "emoji": "📱", "categorias": ["iphone"], "condiciones": ["tester"], "plantilla": "nuevos" },
+    { "titulo": "IPHONE USADO", "emoji": "📱", "categorias": ["iphone"], "condiciones": ["usado"], "plantilla": "usados" },
+    { "titulo": "SAMSUNG", "emoji": "📱", "categorias": ["samsung"], "plantilla": "android" },
+    { "titulo": "MOTOROLA", "emoji": "📱", "categorias": ["motorola"], "plantilla": "android" },
+    { "titulo": "XIAOMI", "emoji": "📱", "categorias": ["xiaomi"], "plantilla": "android" },
+    { "titulo": "APPLE WATCH", "emoji": "⌚", "categorias": ["apple_watch"], "plantilla": "nuevos" },
+    { "titulo": "AIRPODS", "emoji": "🎧", "categorias": ["airpods"], "plantilla": "nuevos" },
+    { "titulo": "IPAD", "emoji": "📲", "categorias": ["ipad"], "plantilla": "nuevos" },
+    { "titulo": "CONSOLAS", "emoji": "🎮", "categorias": ["consolas"], "plantilla": "nuevos" },
+    { "titulo": "MACBOOK", "emoji": "💻", "categorias": ["macbook"], "plantilla": "nuevos" }
+  ]
+}

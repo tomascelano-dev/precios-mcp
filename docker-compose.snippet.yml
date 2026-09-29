@@ -1,0 +1,11 @@
+# Pegar bajo `services:` en /opt/stack/docker-compose.yml, con el repo en apps/precios.
+# Publica solo en 127.0.0.1 como las otras APIs; n8n lo alcanza por la red interna como http://precios-api:8000.
+  precios-api:
+    build: ./apps/precios
+    container_name: stack-precios-api
+    env_file: ./apps/precios/.env
+    ports:
+      - "127.0.0.1:8083:8000"
+    networks: [backend]
+    depends_on: [postgres]
+    restart: unless-stopped
